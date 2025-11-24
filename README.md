@@ -25,6 +25,36 @@ A Java console-based detective game where players step into the shoes of an inve
 - **Feature 6**: Encounter game consequences, such as error messages (CaseNotFoundException) when choosing an invalid case.
 ---
 
+# 🏛️ Program Structure
+```
+📂java-project-demo/
+└── 📂src/
+    ├── Classes:
+    │   ├── ☕ Case.java
+    │   ├── ☕ CaseNotFoundException.java
+    │   ├── ☕ ChemistryLabMurder.java
+    │   ├── ☕ Main.java
+    │   └── ☕ PoetsLastDeadline.java
+    ├── Enums:
+    │   ├── 📋 ChemistryLabMurderSuspects.java
+    │   ├── 📋 NoSuspect.java
+    │   ├── 📋 PoetsLastDeadlineSuspects.java
+    │   └── 📋 StolenFormulaSuspects.java
+    └── Interface:
+        └── 🔗 Suspect.java
+```
+- [ ] `Main.java`: Entry point of the program, containing the menu and handles user interactions.
+- [ ] `Case.java`: Abstract base class defining the structure and behavior of all cases. 
+- [ ] `CaseNotFoundException.java`: Custom exception thrown when an invalid case number is requested. 
+- [ ] `ChemistryLabMurder.java`: Concrete case class detailing the Chemistry Lab Murder, suspect’s alibis evidence, and analysis logic.
+- [ ] `PoetsLastDeadline.java`: Concrete case class detailing the Poets Last Deadline, suspect’s alibis evidence, and analysis logic.
+- [ ] `ChemistryLabMurderSuspects.java` - This enum neatly organizes all suspects for the Chemistry Lab Murder case, with their names, roles, and category.
+- [ ] `NoSuspects.java` - enum representing the initial state when no suspect has been chosen. 
+- [ ] `PoetsLastDeadlineSuspects.java` - Enum enlisting all suspects in the Poet’s Last Deadline case, with their names, roles, and category.
+- [ ] `StolenFormulaSuspects.java` - Enum enlisting all suspects in the Stolen Formula case, with their names, roles, and category.
+- [ ] `Suspect.java` - Interface defining the contract for all suspects, requiring methods for full name and category. 
+
+
 # 🏗️ OOP Concepts Applied
 
 This project demonstrates the core principles of Object-Oriented Programming:
@@ -170,27 +200,7 @@ public interface Suspect {
 - Abstract classes define common structure
 - Interfaces specify required methods
 - Implementation details hidden from end users
-
 ---
-
-# 🏛️ Program Structure
-```
-📂java-project-demo/
-└── 📂src/
-    ├── Classes:
-    │   ├── ☕ Case.java
-    │   ├── ☕ CaseNotFoundException.java
-    │   ├── ☕ ChemistryLabMurder.java
-    │   ├── ☕ Main.java
-    │   └── ☕ PoetsLastDeadline.java
-    ├── Enums:
-    │   ├── 📋 ChemistryLabMurderSuspects.java
-    │   ├── 📋 NoSuspect.java
-    │   ├── 📋 PoetsLastDeadlineSuspects.java
-    │   └── 📋 StolenFormulaSuspects.java
-    └── Interface:
-        └── 🔗 Suspect.java
-```
 ## 📦 Main Classes and Their Roles
 
 ### **1. MainClass** 
