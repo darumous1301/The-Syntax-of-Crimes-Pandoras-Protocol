@@ -257,8 +257,8 @@ public interface Suspect {
 
 ### **Step 1️⃣: Clone or Download the Repository**
 ```bash
-git clone https://github.com/yourusername/project-name.git
-cd project-name
+git clone https://github.com/darumous1301/The-Syntax-of-Crimes-Pandoras-Protocol.git
+cd The-Syntax-of-Crimes-Pandoras-Protocol
 ```
 
 ### **Step 2️⃣: Compile the Java Files**
@@ -267,12 +267,12 @@ cd project-name
 javac *.java
 
 # OR compile specific files
-javac MainClass.java DataHandler.java BusinessLogic.java
+
 ```
 
 ### **Step 3️⃣: Run the Program**
 ```bash
-java MainClass
+java Main
 ```
 
 ### **Step 4️⃣: Follow On-Screen Instructions**
