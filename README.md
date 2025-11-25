@@ -24,9 +24,11 @@ A Java console-based detective game where players step into the shoes of an inve
 - [Polymorphism](#3️⃣-polymorphism)
 - [Abstraction](#4️⃣-abstraction)
 - [Main Classes and Their Roles](#📦-main-classes-and-their-roles)
+- [Class Diagram](#🗺️-class-diagram)
+- [How to run the program](#▶️-how-to-run-the-program)
 
 
-## ✨ Key Features:
+## ✨ Key Features
 - **Feature 1**: Investigate crime cases by selecting case numbers in the Cases Vault.
 - **Feature 2**: Analyze suspects and read their alibis, personal backgrounds, and motives.
 - **Feature 3**: Examine evidence presented for each case to deduce the culprit.
@@ -35,7 +37,7 @@ A Java console-based detective game where players step into the shoes of an inve
 - **Feature 6**: Encounter game consequences, such as error messages (CaseNotFoundException) when choosing an invalid case.
 ---
 
-# 🏛️ Program Structure
+## 🏛️ Program Structure
 ```
 📂java-project-demo/
 └── 📂src/
@@ -138,7 +140,7 @@ class PoetsLastDeadline extends Case {
     }
 ```
 
-**Class Hierarchy:**
+**Class Hierarchy**
 ```
 ```
 
@@ -243,7 +245,7 @@ public interface Suspect {
 
 ---
 
-## 🗺️ Class Diagram (Text-based)
+## 🗺️ Class Diagram
 
 ```
 ┌─────────────────┐
