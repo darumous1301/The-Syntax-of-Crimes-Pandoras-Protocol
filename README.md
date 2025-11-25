@@ -1,4 +1,5 @@
-# 🚀 THE SYNTAX OF CRIME: Pandora's Protocol
+# 🚀 THE SYNTAX OF CRIMES: 
+Pandora's Protocol
 
 <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/2dab0f25-4a94-4700-9bdd-b60c2aeefb47" />
 
