@@ -44,16 +44,16 @@ A Java console-based detective game where players step into the shoes of an inve
     └── Interface:
         └── 🔗 Suspect.java
 ```
-- [ ] `Main.java`: Entry point of the program, containing the menu and handles user interactions.
-- [ ] `Case.java`: Abstract base class defining the structure and behavior of all cases. 
-- [ ] `CaseNotFoundException.java`: Custom exception thrown when an invalid case number is requested. 
-- [ ] `ChemistryLabMurder.java`: Concrete case class detailing the Chemistry Lab Murder, suspect’s alibis evidence, and analysis logic.
-- [ ] `PoetsLastDeadline.java`: Concrete case class detailing the Poets Last Deadline, suspect’s alibis evidence, and analysis logic.
-- [ ] `ChemistryLabMurderSuspects.java` - This enum neatly organizes all suspects for the Chemistry Lab Murder case, with their names, roles, and category.
-- [ ] `NoSuspects.java` - enum representing the initial state when no suspect has been chosen. 
-- [ ] `PoetsLastDeadlineSuspects.java` - Enum enlisting all suspects in the Poet’s Last Deadline case, with their names, roles, and category.
-- [ ] `StolenFormulaSuspects.java` - Enum enlisting all suspects in the Stolen Formula case, with their names, roles, and category.
-- [ ] `Suspect.java` - Interface defining the contract for all suspects, requiring methods for full name and category. 
+- [ ] `Main.java`: _Entry point of the program, containing the menu and handles user interactions._
+- [ ] `Case.java`: _Abstract base class defining the structure and behavior of all cases._
+- [ ] `CaseNotFoundException.java`: _Custom exception thrown when an invalid case number is requested._
+- [ ] `ChemistryLabMurder.java`: _Concrete case class detailing the Chemistry Lab Murder, suspect’s alibis evidence, and analysis logic._
+- [ ] `PoetsLastDeadline.java`: _Concrete case class detailing the Poets Last Deadline, suspect’s alibis evidence, and analysis logic._
+- [ ] `ChemistryLabMurderSuspects.java` _This enum neatly organizes all suspects for the Chemistry Lab Murder case, with their names, roles, and category._
+- [ ] `NoSuspects.java` _enum representing the initial state when no suspect has been chosen._
+- [ ] `PoetsLastDeadlineSuspects.java` _Enum enlisting all suspects in the Poet’s Last Deadline case, with their names, roles, and category._
+- [ ] `StolenFormulaSuspects.java` _Enum enlisting all suspects in the Stolen Formula case, with their names, roles, and category._
+- [ ] `Suspect.java` _Interface defining the contract for all suspects, requiring methods for full name and category._
 
 
 # 🏗️ OOP Concepts Applied
