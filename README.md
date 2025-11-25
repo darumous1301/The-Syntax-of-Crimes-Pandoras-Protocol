@@ -20,7 +20,7 @@ A Java console-based detective game where players step into the shoes of an inve
 # 🏗️ TABLE OF CONTENTS
 [Key Features](##key-features)
 
-[Application of OOP Concepts](#oop-concepts-applied)
+[Application of OOP Concepts](#🏗️-OOP-Concepts-Applied)
 ## ✨ Key Features:
 - **Feature 1**: Investigate crime cases by selecting case numbers in the Cases Vault.
 - **Feature 2**: Analyze suspects and read their alibis, personal backgrounds, and motives.
