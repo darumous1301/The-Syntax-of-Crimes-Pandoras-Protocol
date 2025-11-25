@@ -62,54 +62,80 @@ A Java console-based detective game where players step into the shoes of an inve
     │
     └── Interface:
         └── 🔗 Suspect.java
-
-📝 File Summary:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Total Files: 10 Java files
-
-Main Application:
-  • Main.java (contains inner class ScandalFile)
-
-Abstract Class:
-  • Case.java
-
-Case Implementations (extends Case):
-  • PoetsLastDeadline.java
-  • ChemistryLabMurder.java
-  • StolenFormula.java
-
-Exception:
-  • CaseNotFoundException.java
-
-Interface:
-  • Suspect.java
-
-Enums (implements Suspect):
-  • NoSuspect.java
-  • PoetsLastDeadlineSuspects.java
-  • ChemistryLabMurderSuspects.java
-  • StolenFormulaSuspects.java
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
-- [ ] `Main.java`: _Entry point of the program, containing the menu and handles user interactions._
 
-- [ ] `Case.java`: _Abstract base class defining the structure and behavior of all cases._
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-- [ ] `CaseNotFoundException.java`: _Custom exception thrown when an invalid case number is requested._
-
-- [ ] `ChemistryLabMurder.java`: _Concrete case class detailing the Chemistry Lab Murder, suspect’s alibis evidence, and analysis logic._
-
-- [ ] `PoetsLastDeadline.java`: _Concrete case class detailing the Poets Last Deadline, suspect’s alibis evidence, and analysis logic._
-
-- [ ] `ChemistryLabMurderSuspects.java` _This enum neatly organizes all suspects for the Chemistry Lab Murder case, with their names, roles, and category._
-
-- [ ] `NoSuspects.java` _enum representing the initial state when no suspect has been chosen._
-
-- [ ] `PoetsLastDeadlineSuspects.java` _Enum enlisting all suspects in the Poet’s Last Deadline case, with their names, roles, and category._
-
-- [ ] `StolenFormulaSuspects.java` _Enum enlisting all suspects in the Stolen Formula case, with their names, roles, and category._
-
-- [ ] `Suspect.java` _Interface defining the contract for all suspects, requiring methods for full name and category._
+<table>
+  <thead>
+    <tr>
+      <th align="center">Structure</th>
+      <th align="center">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Main.java</td>
+      <td>Entry point of the program, containing the menu and handles user interactions.</td>
+    </tr>
+    <tr>
+      <td>Case.java</td>
+      <td >Abstract base class defining the structure and behavior of all cases.</td>
+    </tr>
+    <tr>
+      <td>Suspect.java</td>
+      <td>Interface defining the contract for all suspects, requiring methods for full name and category.</td>
+    </tr>
+    <tr>
+      <td>NoSuspect.java</td>
+      <td>Enum representing the initial state when no suspect has been chosen.</td>
+    </tr>
+    <tr>
+      <td>PoetsLastDeadline.java</td>
+      <td>Concrete case class detailing the Poets Last Deadline, suspect’s alibis evidence, and analysis logic.</td>
+    </tr>
+    <tr>
+      <td>ChemistryLabMurder.java</td>
+      <td>Concrete case class detailing the Case of the Chemistry Lab Murder, suspect’s alibis evidence, and analysis logic.</td>
+    </tr>
+    <tr>
+      <td>StolenFormula.java</td>
+      <td>Concrete case class detailing the Case of the Stolen Formula, suspect’s alibis evidence, and analysis logic.</td>
+    </tr>
+    <tr>
+      <td>CaseOfBackwardClock.java</td>
+      <td>Concrete case class detailing the Case of Backward Clock, suspect’s alibis evidence, and analysis logic.</td>
+    </tr>
+    <tr>
+      <td>ConductorsFinalNote.java</td>
+      <td>Concrete case class detailing the Case of Conductors Final Note, suspect’s alibis evidence, and analysis logic.</td>
+    </tr>
+    <tr>
+      <td>PoetsLastDeadlineSuspects.java</td>
+      <td>Enum enlisting all suspects in the Poet’s Last Deadline case, with their names, roles, and category.</td>
+    </tr>
+    <tr>
+      <td>ChemistryLabMurderSuspects.java</td>
+      <td>Enum enlisting all suspects in the Chemistry Lab Murder case, with their names, roles, and category.</td>
+    </tr>
+    <tr>
+      <td>StolenFormulaSuspects.java</td>
+      <td>Enum enlisting all suspects in the Stolen Formula case, with their names, roles, and category.</td>
+    </tr>
+    <tr>
+      <td>CaseOfBackwardClockSuspects.java</td>
+      <td>Enum enlisting all suspects in the Backward Clock case, with their names, roles, and category.</td>
+    </tr>
+    <tr>
+      <td>ConductorsFinalNoteSuspects.java</td>
+      <td>Enum enlisting all suspects in the Conductor's case, with their names, roles, and category.</td>
+    </tr>
+    <tr>
+      <td>CaseNotFoundException</td>
+      <td>Custom exception thrown when an invalid case number is requested.</td>
+    </tr>
+  </tbody>
+</table>
 
 
 # 🏗️ OOP Concepts Applied
@@ -310,48 +336,49 @@ public interface Suspect {
 │                             <<abstract>>                            │   uses   |
 │                               Case.java                             │<─────────|
 └─────────────────────────────────────────────────────────────────────┘          |
-                    ▲                ▲                ▲                          |
-                    │                │                │                          |
-         ┌──────────┘                │                └──────────┐               |
-         │                           │                           │               |
-         │                           │                           │               |
-┌────────────────────┐  ┌────────────────────────┐  ┌──────────────────┐         | 
-│ PoetsLastDeadline  │  │   ChemistryLabMurder   │  │  StolenFormula   │         |
-└────────────────────┘  └────────────────────────┘  └──────────────────┘         | 
-         │                           │                           │               |
-         │ uses                      │ uses                      │ uses          |
-         ▼                           ▼                           ▼               |
-┌────────────────────┐  ┌────────────────────────┐  ┌──────────────────┐         |
-│  PoetsLastDeadline │  │   ChemistryLabMurder   │  │   StolenFormula  │         |
-│      Suspects      │  │       Suspects         │  │     Suspects     │         | 
-│      <<enum>>      │  │       <<enum>>         │  │     <<enum>>     │         |
-└────────────────────┘  └────────────────────────┘  └──────────────────┘         |
-         │                          │                         │                  |
-         │ implements               │ implements              │ implements       |
-         │                          │                         │                  |
-         └──────────────────────────┬─────────────────────────┘                  | 
-                                    ▼                                            |
-                         ┌───────────────────────┐                               |
-                         │     <<interface>>     │              uses             |
-                         │        Suspect        │<──────────────────────────────|
-                         └───────────────────────┘                               |              
-                                    ▲                                            |
-                                    │ implements                                 |
-                                    │                                            |
-                         ┌───────────────────────┐                               |
-                         │       NoSuspect       │                               |
-                         │       <<enum>>        │                               |
-                         └───────────────────────┘                               |
+        ▲           ▲             ▲              ▲            ▲                  |
+        │           │             │              │            │                  |
+        │           │             │              │            │                  |
+┌───────┴───┐ ┌─────┴──────┐ ┌────┴─────┐ ┌──────┴──────┐ ┌───┴───────────┐      |
+│  Poets    │ │ Chemistry  │ │ Stolen   │ │   Backward  │ │   Conductor   │      |
+│   Last    │ │    Lab     │ │ Formula  │ │    Clock    │ │   Final Note  │      |
+│ Deadline  │ │   Murder   │ │          │ │             │ │               │      |
+└───────────┘ └────────────┘ └──────────┘ └─────────────┘ └───────────────┘      |
+     │             │              │              │                 │             |
+     │uses         │uses          │uses          │uses             │uses         |
+     ▼             ▼              ▼              ▼                 ▼             |
+┌─────────┐ ┌──────────────┐ ┌────────┐ ┌─────────────┐ ┌─────────────────┐      |
+│ Poets   │ │  Chemistry   │ │ Stolen │ │   Backward  │ │   Conductor     │      |
+│  Last   │ │     Lab      │ │ Formula│ │    Clock    │ │   FinalNote     │      |
+│Deadline │ │    Murder    │ │Suspects│ │   Suspects  │ │    Suspects     │      |
+│Suspects │ │   Suspects   │ │<<enum>>│ │   <<enum>>  │ │    <<enum>>     │      |
+│<<enum>> │ │  <<enum>>    │ └────────┘ └─────────────┘ └─────────────────┘      |
+└─────────┘ └──────────────┘      │            │                 │               |
+     │             │              │            │                 │               |
+     │implements   │implements    │implements  │implements       │implements     |
+     │             │              │            │                 │               |
+     └─────────────┴──────────────┴────────────┴─────────────────┘               |
+                                  |                                              |
+                                  |                                              |
+                                  ▼                                              |
+                        ┌───────────────────────┐                                |
+                        │     <<interface>>     │              uses              |
+                        │        Suspect        │<───────────────────────────────|
+                        └───────────────────────┘                                |
+                                   ▲                                             |
+                                   │ implements                                  |
+                                   │                                             |
+                        ┌───────────────────────┐                                |
+                        │       NoSuspect       │                                |
+                        │       <<enum>>        │                                |
+                        └───────────────────────┘                                |
                                                                                  |
                                                                                  |
-              ┌─────────────────────────────────────────────────┐                |
-              │                 <<exception>>                   │    throws      |
-              │              CaseNotFoundException              │────────────────|
-              └─────────────────────────────────────────────────┘
+             ┌─────────────────────────────────────────────────┐                 |
+             │                 <<exception>>                   │    throws       |
+             │              CaseNotFoundException              │─────────────────|
+             └─────────────────────────────────────────────────┘
 ```
-
----
-
 # ▶️ How to Run the Program
 
 ## 📋 Prerequisites
