@@ -39,21 +39,57 @@ A Java console-based detective game where players step into the shoes of an inve
 
 ## 🏛️ Program Structure
 ```
-📂java-project-demo/
-└── 📂src/
+📂 The-Syntax-of-Crimes/
+└── 📂 src/
     ├── Classes:
-    │   ├── ☕ Case.java
-    │   ├── ☕ CaseNotFoundException.java
-    │   ├── ☕ ChemistryLabMurder.java
     │   ├── ☕ Main.java
-    │   └── ☕ PoetsLastDeadline.java
+    │   │   └── 📦 inner class: ScandalFile
+    │   ├── ☕ Case.java (abstract)
+    │   ├── ☕ PoetsLastDeadline.java (extends Case)
+    │   ├── ☕ ChemistryLabMurder.java (extends Case)
+    │   ├── ☕ StolenFormula.java (extends Case)
+    |   ├── ☕ CaseOfBackwardClock.java (extends Case)
+    │   ├── ☕ ConductorsFinalNote.java (extends Case)
+    │   └── ☕ CaseNotFoundException.java (exception)
+    │
     ├── Enums:
-    │   ├── 📋 ChemistryLabMurderSuspects.java
-    │   ├── 📋 NoSuspect.java
-    │   ├── 📋 PoetsLastDeadlineSuspects.java
-    │   └── 📋 StolenFormulaSuspects.java
+    │   ├── 📋 NoSuspect.java (implements Suspect)
+    │   ├── 📋 PoetsLastDeadlineSuspects.java (implements Suspect)
+    │   ├── 📋 ChemistryLabMurderSuspects.java (implements Suspect)
+    |   ├── 📋 CaseOfBackwardClockSuspects.java (implements Suspect)
+    │   ├── 📋 ConductorsFinalNoteSuspects.java (implements Suspect)
+    │   └── 📋 StolenFormulaSuspects.java (implements Suspect)
+    │
     └── Interface:
         └── 🔗 Suspect.java
+
+📝 File Summary:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Total Files: 10 Java files
+
+Main Application:
+  • Main.java (contains inner class ScandalFile)
+
+Abstract Class:
+  • Case.java
+
+Case Implementations (extends Case):
+  • PoetsLastDeadline.java
+  • ChemistryLabMurder.java
+  • StolenFormula.java
+
+Exception:
+  • CaseNotFoundException.java
+
+Interface:
+  • Suspect.java
+
+Enums (implements Suspect):
+  • NoSuspect.java
+  • PoetsLastDeadlineSuspects.java
+  • ChemistryLabMurderSuspects.java
+  • StolenFormulaSuspects.java
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 - [ ] `Main.java`: _Entry point of the program, containing the menu and handles user interactions._
 
