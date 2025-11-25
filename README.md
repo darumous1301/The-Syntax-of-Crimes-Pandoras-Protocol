@@ -16,14 +16,14 @@
 
 A Java console-based detective game where players step into the shoes of an investigator tasked with solving a series of crimes. With the legendary Sherlock Holmes occupied with more pressing cases out of town, the pressure falls on you to crack each case and bring justice to the innocent victims. Complete all five cases to earn crucial clues needed to unlock the ultimate carrier of secrets - **[the Pandora's Box]**. In this digital era, where inequality plagues every nation and corruption, killings, and graft run rampant, the people deserve to know the truth. Your mission is to expose the crocodiles in high government positions who exploit the lives of the poor. Unlock Pandora's Box and, with just one click, reveal all their secrets to the world.
 
-# 🏗️ TABLE OF CONTENTS
-- [Key Features](##key-features)
-- [Program Structure](#program-structure)
-- [Encapsulation](##Encapsulation)
-- [Inheritance](##Inheritance)
-- [Polymorphism](##Polymorphism)
-- [Abstraction](##Abstraction)
-- [Main Classes and their Roles](##main-classes-and-their-roles)
+# TABLE OF CONTENTS
+- [Key Features](#✨-key-features)
+- [Program Structure](#🏛️-program-structure)
+- [Encapsulation](#1️⃣-encapsulation)
+- [Inheritance](#2️⃣-inheritance)
+- [Polymorphism](#3️⃣-polymorphism)
+- [Abstraction](#4️⃣-abstraction)
+- [Main Classes and Their Roles](#📦-main-classes-and-their-roles)
 
 
 ## ✨ Key Features:
