@@ -56,14 +56,23 @@ A Java console-based detective game where players step into the shoes of an inve
         └── 🔗 Suspect.java
 ```
 - [ ] `Main.java`: _Entry point of the program, containing the menu and handles user interactions._
+
 - [ ] `Case.java`: _Abstract base class defining the structure and behavior of all cases._
+
 - [ ] `CaseNotFoundException.java`: _Custom exception thrown when an invalid case number is requested._
+
 - [ ] `ChemistryLabMurder.java`: _Concrete case class detailing the Chemistry Lab Murder, suspect’s alibis evidence, and analysis logic._
+
 - [ ] `PoetsLastDeadline.java`: _Concrete case class detailing the Poets Last Deadline, suspect’s alibis evidence, and analysis logic._
+
 - [ ] `ChemistryLabMurderSuspects.java` _This enum neatly organizes all suspects for the Chemistry Lab Murder case, with their names, roles, and category._
+
 - [ ] `NoSuspects.java` _enum representing the initial state when no suspect has been chosen._
+
 - [ ] `PoetsLastDeadlineSuspects.java` _Enum enlisting all suspects in the Poet’s Last Deadline case, with their names, roles, and category._
+
 - [ ] `StolenFormulaSuspects.java` _Enum enlisting all suspects in the Stolen Formula case, with their names, roles, and category._
+
 - [ ] `Suspect.java` _Interface defining the contract for all suspects, requiring methods for full name and category._
 
 
@@ -248,21 +257,61 @@ public interface Suspect {
 ## 🗺️ Class Diagram
 
 ```
-┌─────────────────┐
-│   MainClass     │  (Entry Point)
-└────────┬────────┘
-         │
-         │ uses
-         ▼
-┌─────────────────┐         ┌──────────────────┐
-│  DataHandler    │◄────────│  BusinessLogic   │
-└─────────────────┘  uses   └──────────────────┘
-         │                            │
-         │                            │
-         ▼                            ▼
-┌─────────────────┐         ┌──────────────────┐
-│   DataModel     │         │   Validator      │
-└─────────────────┘         └──────────────────┘
+┌─────────────────────────────────────────────────────────────────────┐
+│                              <<Main>>                               │──────────|
+│                            Main.java                                │          |
+└─────────────────────────────────────────────────────────────────────┘          |
+                                │                                                |uses/throws
+                                │ contains                                       |
+                                ▼                                                |
+                  ┌──────────────────────────────┐                               |
+                  │    <<inner class>>           │                               |
+                  │      ScandalFile             │                               |
+                  └──────────────────────────────┘                               |
+                                                                                 |
+                                                                                 |
+┌─────────────────────────────────────────────────────────────────────┐          |
+│                             <<abstract>>                            │   uses   |
+│                               Case.java                             │<─────────|
+└─────────────────────────────────────────────────────────────────────┘          |
+                    ▲                ▲                ▲                          |
+                    │                │                │                          |
+         ┌──────────┘                │                └──────────┐               |
+         │                           │                           │               |
+         │                           │                           │               |
+┌────────────────────┐  ┌────────────────────────┐  ┌──────────────────┐         | 
+│ PoetsLastDeadline  │  │   ChemistryLabMurder   │  │  StolenFormula   │         |
+└────────────────────┘  └────────────────────────┘  └──────────────────┘         | 
+         │                           │                           │               |
+         │ uses                      │ uses                      │ uses          |
+         ▼                           ▼                           ▼               |
+┌────────────────────┐  ┌────────────────────────┐  ┌──────────────────┐         |
+│  PoetsLastDeadline │  │   ChemistryLabMurder   │  │   StolenFormula  │         |
+│      Suspects      │  │       Suspects         │  │     Suspects     │         | 
+│      <<enum>>      │  │       <<enum>>         │  │     <<enum>>     │         |
+└────────────────────┘  └────────────────────────┘  └──────────────────┘         |
+         │                          │                         │                  |
+         │ implements               │ implements              │ implements       |
+         │                          │                         │                  |
+         └──────────────────────────┬─────────────────────────┘                  | 
+                                    ▼                                            |
+                         ┌───────────────────────┐                               |
+                         │     <<interface>>     │              uses             |
+                         │        Suspect        │<──────────────────────────────|
+                         └───────────────────────┘                               |              
+                                    ▲                                            |
+                                    │ implements                                 |
+                                    │                                            |
+                         ┌───────────────────────┐                               |
+                         │       NoSuspect       │                               |
+                         │       <<enum>>        │                               |
+                         └───────────────────────┘                               |
+                                                                                 |
+                                                                                 |
+              ┌─────────────────────────────────────────────────┐                |
+              │                 <<exception>>                   │    throws      |
+              │              CaseNotFoundException              │────────────────|
+              └─────────────────────────────────────────────────┘
 ```
 
 ---
@@ -390,7 +439,7 @@ System loading.....................(Enter to continue)
     <img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=yellow" alt="darumous1301's GitHub">
         </a>
     </td>
-    <td>ROLE </td>
+    <td>Project Leader/Git Manager & System Architect</td>
 </tr>
 <tr>
     <td><img src="static/irish.png" width="100" height="100"> </td>
@@ -399,7 +448,7 @@ System loading.....................(Enter to continue)
     <img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=blue" alt="ciancrey's GitHub">
         </a>
     </td>
-    <td>ROLE </td>
+    <td>Content Writer / Security & Error-Handling Specialist</td>
 </tr>
 <tr>
     <td><img src="static/anica.png" width="100" height="100"> </td>
@@ -408,7 +457,7 @@ System loading.....................(Enter to continue)
     <img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=pink" alt="Anicakim13's GitHub">
         </a>
     </td>
-    <td>ROLE </td>
+    <td>Content Writer & Documentation Head</td>
 </tr>
 </table>
 
