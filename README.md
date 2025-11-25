@@ -16,22 +16,10 @@
 
 A Java console-based detective game where players step into the shoes of an investigator tasked with solving a series of crimes. With the legendary Sherlock Holmes occupied with more pressing cases out of town, the pressure falls on you to crack each case and bring justice to the innocent victims. Complete all five cases to earn crucial clues needed to unlock the ultimate carrier of secrets - **[the Pandora's Box]**. In this digital era, where inequality plagues every nation and corruption, killings, and graft run rampant, the people deserve to know the truth. Your mission is to expose the crocodiles in high government positions who exploit the lives of the poor. Unlock Pandora's Box and, with just one click, reveal all their secrets to the world.
 
-# TABLE OF CONTENTS
-- [Key Features](#✨-key-features)
-- [Program Structure](#🏛️-program-structure)
-- [Encapsulation](#1️⃣-encapsulation)
-- [Inheritance](#2️⃣-inheritance)
-- [Polymorphism](#3️⃣-polymorphism)
-- [Abstraction](#4️⃣-abstraction)
-- [Main Classes and Their Roles](#📦-main-classes-and-their-roles)
-- [Class Diagram](#🗺️-class-diagram)
-- [How to run the program](#▶️-how-to-run-the-program)
-
-
 ## ✨ Key Features
-- **Feature 1**: Investigate crime cases by selecting case numbers in the Cases Vault.
-- **Feature 2**: Analyze suspects and read their alibis, personal backgrounds, and motives.
-- **Feature 3**: Examine evidence presented for each case to deduce the culprit.
+- **Navigate through Cases**: Investigate crime cases by selecting case numbers in the Cases Vault.
+- **Investigate**: Analyze suspects and read their alibis, personal backgrounds, and motives.
+- **Deduce Culprit**: Examine evidence presented for each case to deduce the culprit.
 - **Feature 4**: Identify the correct suspect by manually typing their name based on clues.
 - **Feature 5**: Explore locked files inside Pandora’s Box through a login system (hidden scandals).
 - **Feature 6**: Encounter game consequences, such as error messages (CaseNotFoundException) when choosing an invalid case.
@@ -141,6 +129,11 @@ A Java console-based detective game where players step into the shoes of an inve
 # 🏗️ OOP Concepts Applied
 
 This project demonstrates the core principles of Object-Oriented Programming:
+
+- [Encapsulation](#1️⃣-encapsulation)
+- [Inheritance](#2️⃣-inheritance)
+- [Polymorphism](#3️⃣-polymorphism)
+- [Abstraction](#4️⃣-abstraction)
 
 ## 1️⃣ Encapsulation
 > 🔒 **Data Hiding & Protection**
