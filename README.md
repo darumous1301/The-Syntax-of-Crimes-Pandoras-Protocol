@@ -1,5 +1,4 @@
 # 🚀 THE SYNTAX OF CRIMES: 
-Pandora's Protocol
 
 <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/2dab0f25-4a94-4700-9bdd-b60c2aeefb47" />
 
@@ -18,9 +17,15 @@ Pandora's Protocol
 A Java console-based detective game where players step into the shoes of an investigator tasked with solving a series of crimes. With the legendary Sherlock Holmes occupied with more pressing cases out of town, the pressure falls on you to crack each case and bring justice to the innocent victims. Complete all five cases to earn crucial clues needed to unlock the ultimate carrier of secrets - **[the Pandora's Box]**. In this digital era, where inequality plagues every nation and corruption, killings, and graft run rampant, the people deserve to know the truth. Your mission is to expose the crocodiles in high government positions who exploit the lives of the poor. Unlock Pandora's Box and, with just one click, reveal all their secrets to the world.
 
 # 🏗️ TABLE OF CONTENTS
-[Key Features](##key-features)
+- [Key Features](##key-features)
+- [Program Structure](#program-structure)
+- [Encapsulation](##Encapsulation)
+- [Inheritance](##Inheritance)
+- [Polymorphism](##Polymorphism)
+- [Abstraction](##Abstraction)
+- [Main Classes and their Roles](##main-classes-and-their-roles)
 
-[Application of OOP Concepts](#🏗️-OOP-Concepts-Applied)
+
 ## ✨ Key Features:
 - **Feature 1**: Investigate crime cases by selecting case numbers in the Cases Vault.
 - **Feature 2**: Analyze suspects and read their alibis, personal backgrounds, and motives.
