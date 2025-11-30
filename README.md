@@ -69,6 +69,7 @@ This project demonstrates the core principles of Object-Oriented Programming:
 Encapsulation was implemented to protect sensitive data and provide controlled access through getter and setter methods. Private attributes ensure that internal object states cannot be modified directly from outside the class.
 
 ```java
+//preview from actual code
 public abstract class Case {
     private int caseID;
     private String caseName;
@@ -97,6 +98,7 @@ Inheritance promotes code reusability by creating parent-child relationships bet
 
 ```java
 //PARENT CLASS FOR ALL CASES
+//preview from actual code
 public abstract class Case { 
 ```
 ```java
@@ -166,6 +168,7 @@ Polymorphism allows objects to take multiple forms through method overriding and
 ```java
 @Override
 //EXAMPLE PoetsLastDeadline.java
+//preview from actual code
 public void displayCaseInfo() {
     System.out.println("====== Case of Poet's Last Deadline ======");
     System.out.println("Case ID: " + getCaseID());
@@ -183,6 +186,7 @@ public boolean isCaseSolved() {
 }
 ```
 ```java
+//preview from actual code
 PoetsLastDeadline case1 = new PoetsLastDeadline();
 case1.displayCaseInfo();  // calls override method
 
@@ -204,6 +208,7 @@ Abstraction hides complex implementation details and shows only the essential fe
 
 ```java
 //ABSTACT CLASS Case.java
+//preview from actual code
 public abstract class Case {
     public void displayCaseInfo() {
         System.out.println("Case ID: " + caseID);
@@ -256,6 +261,7 @@ Abstraction hides complex implementation details and shows only the essential fe
 
 ```java
 //CaseNotFoundException.java
+//preview from actual code
 public class CaseNotFoundException extends Exception {
     private int invalidCaseNumber;
 
@@ -270,6 +276,7 @@ public class CaseNotFoundException extends Exception {
 }
 ```
 ```java
+//preview from actual code
 try {
     System.out.print("\n\n>> Investigate Case No.: ");
     int caseNo = sc.nextInt();
@@ -323,34 +330,67 @@ try {
 
 ## 📦 Main Classes and Their Roles
 
-### **1. MainClass** 
-🎯 **Role**: Entry point of the application, handles user interaction and program flow
+### **1. Main Class** 
+🎯 **Role**: Acts as the entry point of the entire program. It handles all user interactions, displays the main menu, handles the features, and the one manages case selections.
 
 **Key Methods:**
 - `main()` - Program entry point
-- `displayMenu()` - Shows user options
-- `processInput()` - Handles user commands
+- `MainMenu()` - Shows user options from Main Menu
+- `authenticate()` - Handles user commands
+- `morseToLetter()` - Handles user commands
+- `morseCodeDecoder()` - Handles user commands
+- `pandorasBox()` - It handles Pandora’s Box login
+- `uploadSecrets()` - Handles user commands
+- `Instructions()` - Shows user options
 
 ---
 
-### **2. DataHandler**
-💾 **Role**: Manages data operations, storage, and retrieval
+### **2. Parent Class(Case.java)**
+💾 **Role**: It serves as the blueprint for all crime cases. Every case shares the same basic parts, and this class defines them. 
 
 **Key Methods:**
-- `loadData()` - Loads data from source
-- `saveData()` - Persists data to storage
-- `validateData()` - Ensures data integrity
+- `Case(...)` `Case()` - Default constructor and (with) Parameter Constructor
+- `getCaseID()` `setCaseID(...)`  - 5 Getters and 5 Setters methods
+- `displayCaseInfo()` - Displays basic case information
+- `analyzeCaseClues()` `isCaseSolved()` - An abstract method and must be implemented by all child classes
+- `casesVault()` - Displays all available cases in the vault
 
 ---
 
-### **3. BusinessLogic**
+### **3. Child Classes (5 Cases)**
+⚙️ **Role**: Each of the classes represents one full crime case in the program. All of them extend case.java and each provide their own story, suspects, and even evidence.
+
+**Key Methods:**
+- `PoetsLastDeadlineSuspects()` `ChemistryLabMurderSuspects()` `StolenFormulaSuspects()` `CaseOfBackwardClockSuspects()` `ConductorsLastNotSuspects()`- contains all details about the cases and its suspects.
+- `getSuspect()` `setSuspect(...)` - Executes business operations
+- `displayCaseInfo()` `analyzeCaseClues()` `isCaseSolved()` - Override methods
+---
+
+### **4. Enums (6 Enums)**
 ⚙️ **Role**: Contains core business rules and processing logic
 
 **Key Methods:**
-- `calculate()` - Performs calculations
-- `process()` - Executes business operations
-- `validate()` - Validates business rules
+- `NoSuspect(...)`- Performs calculations
+- `PoetsLastDeadlineSuspects()` `ChemistryLabMurderSuspects()` `StolenFormulaSuspects()` `CaseOfBackwardClockSuspects()` `ConductorsLastNotSuspects()`- Override methods
+- `getFullName()` `GetCategory()` `GetRole()` - Executes business operations
 
+---
+
+### **5. Exception Handler**
+⚙️ **Role**: It shows an error when the player enters a case number that does not exist. It makes the game safer and prevents crashing.
+
+**Key Methods:**
+- `CaseNotFoundException(...)` - Performs calculations
+- `getInvalidCaseNumber()` - Executes business operations
+- `getMessage()` `toString()` `printStackTrace()` - Inherited methods from exception class
+---
+
+### **6. The Interface (Suspect.java)**
+⚙️ **Role**: Every Suspect is set to follow this “rule set”. The interface ensures all suspect enums have the same required methods. 
+
+**Key Methods:**
+- `getFullName()` - Performs calculations
+- `getCategory()` - Executes business operations
 ---
 
 ## 🗺️ Class Diagram
@@ -489,36 +529,25 @@ chosenOne.pdf - view
 ...
 
 ```
-```
-Wtsn_47: Congratulations! Please type your preferred codename: Doe12   
-
-LET THE PROTOCOL BEGIN, Doe12
-System loading.....................(Enter to continue)
 
 
-╔════════════════════════════════════════╗
-║            MAIN MENU                   ║
-╚════════════════════════════════════════╝
-
-[1] Cases Vault
-[2] Pandora's Box
-[3] Morse Code Decoder
-[4] Leave Game
-
-» Enter your choice:
-```
-
-> 💡 **Note**: Actual output may vary based on user input and program state.
-
-## 📸 Sample Screenshots
+## 📸 Output Screenshots
 
 *(If you have screenshots, add them here)*
 
-```
-[Screenshot of main menu]
-[Screenshot of processing screen]
-[Screenshot of results display]
-```
+<p align="center">
+  <img src="static/MainMenu.png" alt="App Screenshot" width="400"/><br>
+  <em>Screenshot of the game's Main Menu along with the Case Vault Menu</em>
+</p>
+<p align="center">
+  <img src="static/PandorasBoxContents.png" alt="App Screenshot" width="400"/><br>
+  <em>Screenshot of the Pandora's Box</em>
+</p>
+<p align="center">
+  <img src="static/MorseCodeDecoder.png" alt="App Screenshot" width="400"/><br>
+  <em>Screenshot of the Morse Code Decoder</em>
+</p>
+
 
 ---
 
@@ -607,6 +636,7 @@ The following features and improvements are planned for future versions:
 1. **Sherlock Holmes** - Various cases of his were utilized and modified to show our users the art of deduction and critical thinking skills.
 2. **Project LOKI** - Serves as the inspiration in creating The Chemistry Lab Murder, one of the case in the game.
 ---
+
 
 
 
