@@ -10,8 +10,6 @@
 
 </div>
 
----
-
 # 📝 Description / Overview
 
 A Java console-based detective game where players step into the shoes of an investigator tasked with solving a series of crimes. With the legendary Sherlock Holmes occupied with more pressing cases out of town, the pressure falls on you to crack each case and bring justice to the innocent victims. Complete all five cases to earn crucial clues needed to unlock the ultimate carrier of secrets - **[the Pandora's Box]**. In this digital era, where inequality plagues every nation and corruption, killings, and graft run rampant, the people deserve to know the truth. Your mission is to expose the crocodiles in high government positions who exploit the lives of the poor. Unlock Pandora's Box and, with just one click, reveal all their secrets to the world.
@@ -23,7 +21,6 @@ A Java console-based detective game where players step into the shoes of an inve
 - **4**: Identify the correct suspect by manually typing their name based on clues.
 - **5**: Explore locked files inside Pandora’s Box through a login system (hidden scandals).
 - **6**: Encounter game consequences, such as error messages (CaseNotFoundException) when choosing an invalid case.
----
 
 ## 🏛️ Program Structure
 ```
@@ -581,7 +578,6 @@ chosenOne.pdf - view
   <em>Screenshot of the Morse Code Decoder</em>
 </p>
 
-
 ---
 
 # 👨‍💻 Author & Acknowledgements
@@ -669,6 +665,7 @@ The following features and improvements are planned for future versions:
 1. **Sherlock Holmes** - Various cases of his were utilized and modified to show our users the art of deduction and critical thinking skills.
 2. **Project LOKI** - Serves as the inspiration in creating The Chemistry Lab Murder, one of the case in the game.
 ---
+
 
 
 
