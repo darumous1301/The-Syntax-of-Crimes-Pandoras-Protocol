@@ -471,19 +471,20 @@ try {
 
 ## 🚀 Step-by-Step Instructions
 
-### **Step 1️⃣: Clone or Download the Repository**
+### **Step 1️⃣: Download the Repository**
 ```bash
-git clone https://github.com/darumous1301/The-Syntax-of-Crimes-Pandoras-Protocol.git
-cd The-Syntax-of-Crimes-Pandoras-Protocol
+Click the green "Code" button on the repository page
+Select "Download ZIP"
+Extract the ZIP file to your desired location
+Navigate to the extracted folder in your terminal
 ```
 
-### **Step 2️⃣: Compile the Java Files**
+### **Step 2️⃣: Navigate to the Source Directory and Compile the Java Files**
 ```bash
-# Compile all Java files in the directory
+cd src
+
+// Compile
 javac *.java
-
-# OR compile specific files
-
 ```
 
 ### **Step 3️⃣: Run the Program**
@@ -491,8 +492,35 @@ javac *.java
 java Main
 ```
 
-### **Step 4️⃣: Follow On-Screen Instructions**
-The program will display a menu or prompts. Enter your choices as directed by the interface.
+### **Step 4️⃣: Follow on screen instructions**
+The program will display a menu and prompts. Follow these steps:
+
+Read Sherlock's letter - Press ENTER to continue through the introduction
+Enter your codename - Type your detective name
+Main Menu Options:
+
+[1] Cases Vault - Investigate murder cases
+[2] Pandora's Box - Access classified files (requires password)
+[3] Morse Code Decoder - Decode clues
+[4] Leave Game - Exit program
+
+
+Solving Cases:
+
+Select case number (6601-6605)
+Read case details carefully
+Optional: Contact Sherlock for hints (type Y)
+Enter suspect's full name
+Collect Morse code clues when solved correctly
+
+
+Unlocking Pandora's Box:
+
+Solve all 5 cases to collect Morse code clues
+Use Morse Code Decoder to reveal password
+Username: Decode from clue hint
+Password: 5-letter word related to politics
+Leak scandal files to expose corruption
 
 ---
 
@@ -586,7 +614,7 @@ chosenOne.pdf - view
 </tr>
 <tr>
     <td><img src="static/anica.png" width="100" height="100"> </td>
-    <td><strong>Baruel, Anica Kim D., BSCS</strong> <br/>
+    <td><strong>, Anica Kim D. Baruel, BSCS</strong> <br/>
     <a href="https://github.com/Anicakim13" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=pink" alt="Anicakim13's GitHub">
         </a>
@@ -641,6 +669,7 @@ The following features and improvements are planned for future versions:
 1. **Sherlock Holmes** - Various cases of his were utilized and modified to show our users the art of deduction and critical thinking skills.
 2. **Project LOKI** - Serves as the inspiration in creating The Chemistry Lab Murder, one of the case in the game.
 ---
+
 
 
 
