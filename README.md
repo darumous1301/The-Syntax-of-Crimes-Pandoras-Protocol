@@ -86,9 +86,8 @@ public abstract class Case {
 ```
 
 **Implementation in Project:**
-- Private instance variables in all data classes
-- Public getter/setter methods with validation
-
+- Used private attributes in Case to protect internal data.
+- Every case (Poet, Chemistry Lab, etc.) inherits these protected fields and accesses them through methods.
 ---
 
 ## 2️⃣ Inheritance
@@ -155,9 +154,9 @@ class ConductorsFinalNote extends Case {
 
 
 **Implementation in Project:**
-- Base class contains common attributes and methods
-- Derived classes extend functionality for specific use cases
-- Reduces code duplication and improves maintainability
+- The abstract class Case acts as the parent template for all crime cases.
+- Each case class (PoetsLastDeadline, ChemistryLabMurder, etc.) extends Case, automatically inheriting: caseID, caseName, caseDescription, suspectAlibi, evidences, shared methods like displayCaseInfo()
+- This reduces repeated code and creates a clear hierarchy for all case types.
 
 ---
 
@@ -195,9 +194,11 @@ case1.setSuspect(matchedSuspect);  // use interface from Suspect.java
 ```
 
 **Implementation in Project:**
-- Method overriding for specialized behavior in child classes
-- Method overloading for different parameter combinations
-- Interface implementation for contract-based programming
+- All case classes override parent abstract methods: displayCaseInfo() - each case prints unique visuals, analyzeCaseClues() - each case has different clue analysis and isCaseSolved() - each case checks a different correct suspect.
+- When calling methods (ex: case1.displayCaseInfo()), Java chooses the child’s version automatically.
+- Enum suspects implement the same interface (Suspect), but return different names and roles depending on the case.
+- This allows the system to process different cases and suspects using the same method calls.
+
 
 ---
 
@@ -249,9 +250,10 @@ public enum PoetsLastDeadlineSuspects implements Suspect {
 }
 ```
 **Implementation in Project:**
-- Abstract classes define common structure
-- Interfaces specify required methods
-- Implementation details hidden from end users
+- Used an abstract class (Case) to hide complex case-analysis logic and expose only essential methods like analyzeCaseClues() and isCaseSolved().
+- Used a Suspect interface ensured all suspects provide simple, consistent methods without revealing how their information is stored behind the scenes.
+- Each case and suspect enum fills in its own detailed logic, but other parts of the program only see the essential behaviors they provide. 
+
 ---
 
 ## 4️⃣ Exception Handling
@@ -327,6 +329,12 @@ try {
     break;
 }
 ```
+
+**Implementation in Project:**
+- Created a custom exception CaseNotFoundException to handle invalid case numbers cleanly.
+- Used try–catch blocks to detect: Wrong input types (letters instead of numbers), Non-existing case numbers, Invalid suspect names, No input / input interruption
+- Error messages are user-friendly and guide the player back to correct input.
+- Prevents program crashes by catching and handling mistakes correctly.
 
 ## 📦 Main Classes and Their Roles
 
@@ -634,6 +642,7 @@ The following features and improvements are planned for future versions:
 1. **Sherlock Holmes** - Various cases of his were utilized and modified to show our users the art of deduction and critical thinking skills.
 2. **Project LOKI** - Serves as the inspiration in creating The Chemistry Lab Murder, one of the case in the game.
 ---
+
 
 
 
