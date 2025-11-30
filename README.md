@@ -257,9 +257,9 @@ public enum PoetsLastDeadlineSuspects implements Suspect {
 ---
 
 ## 4️⃣ Exception Handling
-> 🎨 **Hiding Complexity**
+> 🎨 **Handling Errors**
 
-Abstraction hides complex implementation details and shows only the essential features of objects. This simplifies the interface and reduces complexity for users of the class.
+-Exception handling - Without proper exception handling and user prompt an invalid answer, then it will return a message that the whole game crash.
 
 ```java
 //CaseNotFoundException.java
@@ -642,6 +642,7 @@ The following features and improvements are planned for future versions:
 1. **Sherlock Holmes** - Various cases of his were utilized and modified to show our users the art of deduction and critical thinking skills.
 2. **Project LOKI** - Serves as the inspiration in creating The Chemistry Lab Murder, one of the case in the game.
 ---
+
 
 
 
