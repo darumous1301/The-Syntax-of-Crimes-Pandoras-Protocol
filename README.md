@@ -27,7 +27,7 @@ A Java console-based detective game where players step into the shoes of an inve
 
 ## 🏛️ Program Structure
 ```
-📂 The-Syntax-of-Crimes/
+📂 The-Syntax-of-Crimes-Pandoras-Protocol/
 └── 📂 src/
     ├── Classes:
     │   ├── ☕ Main.java
@@ -66,7 +66,7 @@ This project demonstrates the core principles of Object-Oriented Programming:
 ## 1️⃣ Encapsulation
 > 🔒 **Data Hiding & Protection**
 
-Encapsulation was implemented to protect sensitive data and provide controlled access through getter and setter methods. Private attributes ensure that internal object states cannot be modified directly from outside the class.
+The game protects sensitive case data by making all fields in the Case class private and providing controlled access through public getters and setters.
 
 ```java
 //preview from actual code
@@ -93,7 +93,7 @@ public abstract class Case {
 ## 2️⃣ Inheritance
 > 🌳 **Code Reusability & Hierarchy**
 
-Inheritance promotes code reusability by creating parent-child relationships between classes. Child classes inherit properties and methods from parent classes while adding their own specific functionality.
+Users experience consistent interfaces across all 5 cases while each case maintains its unique story, suspects, and clues. Adding a 6th case in the future would be easy, just create another child class.
 
 ```java
 //PARENT CLASS FOR ALL CASES
@@ -163,7 +163,8 @@ class ConductorsFinalNote extends Case {
 ## 3️⃣ Polymorphism
 > 🎭 **Many Forms, One Interface**
 
-Polymorphism allows objects to take multiple forms through method overriding and overloading, enabling flexible and dynamic behavior at runtime.
+Each case feels unique with its own clues and analysis, but the users interacts with all cases using the same commands and flow, creating both variety and consistency in the user experience.
+
 ```java
 @Override
 //EXAMPLE PoetsLastDeadline.java
@@ -205,7 +206,7 @@ case1.setSuspect(matchedSuspect);  // use interface from Suspect.java
 ## 4️⃣ Abstraction
 > 🎨 **Hiding Complexity**
 
-Abstraction hides complex implementation details and shows only the essential features of objects. This simplifies the interface and reduces complexity for users of the class.
+The game has a consistent structure where every case is guaranteed to have clue analysis and solution validation, while the interface ensures all suspects behave consistently regardless of which case they belong to.
 
 ```java
 //ABSTACT CLASS Case.java
@@ -259,7 +260,7 @@ public enum PoetsLastDeadlineSuspects implements Suspect {
 ## 4️⃣ Exception Handling
 > 🎨 **Handling Errors**
 
--Exception handling - Without proper exception handling and user prompt an invalid answer, then it will return a message that the whole game crash.
+ It is used to handle runtime errors and alow the program to run on its normal state.
 
 ```java
 //CaseNotFoundException.java
@@ -342,14 +343,14 @@ try {
 🎯 **Role**: Acts as the entry point of the entire program. It handles all user interactions, displays the main menu, handles the features, and the one manages case selections.
 
 **Key Methods:**
-- `main()` - Program entry point
+- `main()` - Program main entry point
 - `MainMenu()` - Shows user options from Main Menu
-- `authenticate()` - Handles user commands
-- `morseToLetter()` - Handles user commands
-- `morseCodeDecoder()` - Handles user commands
-- `pandorasBox()` - It handles Pandora’s Box login
-- `uploadSecrets()` - Handles user commands
-- `Instructions()` - Shows user options
+- `authenticate()` - This method returns a boolean value that authenticates if username and password prompt by the user is equal to the fixed declared username and password by the authors.
+- `morseToLetter()` - Returns the corresponding letter value of the prompt morse code via switch statement.
+- `morseCodeDecoder()` - Handles users morse code input and as it iterates through the for-each loop (if any chance that the user enters series of morse code separated by spaces) then it appends value until it forms a word/ sentences/ series of numbers.
+- `pandorasBox()` - Consists of Dynamic Array List to store Politians Scandal Files and that for every record 4 values is pass to the ScandalFile constructor.
+- `uploadSecrets()` - A function that prompts the user if it wants to upload the files to the public.
+- `Instructions()` - Shows Users instructions and guidance for the game.
 
 ---
 
@@ -369,36 +370,34 @@ try {
 ⚙️ **Role**: Each of the classes represents one full crime case in the program. All of them extend case.java and each provide their own story, suspects, and even evidence.
 
 **Key Methods:**
-- `PoetsLastDeadlineSuspects()` `ChemistryLabMurderSuspects()` `StolenFormulaSuspects()` `CaseOfBackwardClockSuspects()` `ConductorsLastNotSuspects()`- contains all details about the cases and its suspects.
-- `getSuspect()` `setSuspect(...)` - Executes business operations
-- `displayCaseInfo()` `analyzeCaseClues()` `isCaseSolved()` - Override methods
+- `PoetsLastDeadline()` `ChemistryLabMurder()` `StolenFormula()` `CaseOfBackwardClock()` `ConductorsLastNote()`- Each child class represents a specific murder case with its own unique story, suspects, clues, and solution. They all extend the Case base class but provide their own case-specific details and logic.
+- `getSuspect()` `setSuspect(...)` - This method (getSuspect) returns the current value of the suspect field. While the latter assigns a new value to the suspect field.
+- `displayCaseInfo()` `analyzeCaseClues()` `isCaseSolved()` - Show all case information to the user.
 ---
 
 ### **4. Enums (6 Enums)**
-⚙️ **Role**: Contains core business rules and processing logic
+⚙️ **Role**: Represent fixed set of constants that are related to each other.
 
 **Key Methods:**
-- `NoSuspect(...)`- Performs calculations
-- `PoetsLastDeadlineSuspects()` `ChemistryLabMurderSuspects()` `StolenFormulaSuspects()` `CaseOfBackwardClockSuspects()` `ConductorsLastNotSuspects()`- Override methods
-- `getFullName()` `GetCategory()` `GetRole()` - Executes business operations
-
+- `NoSuspect(...)`- The default/initial state when no suspect has been selected yet ad it provides a valid empty state
+- `PoetsLastDeadlineSuspects()` `ChemistryLabMurderSuspects()` `StolenFormulaSuspects()` `CaseOfBackwardClockSuspects()` `ConductorsLastNotSuspects()`- Initialize suspects with their identifying information (fullname and role) and store details to each case. It also prevents invalid accusations like jumping to the suspects of other cases.
+- `getFullName()` `GetCategory()` `GetRole()` - It implements Suspect interface through many forms. While the GetRole serves as the unique identifier of each suspect in each class.
 ---
 
 ### **5. Exception Handler**
 ⚙️ **Role**: It shows an error when the player enters a case number that does not exist. It makes the game safer and prevents crashing.
 
 **Key Methods:**
-- `CaseNotFoundException(...)` - Performs calculations
-- `getInvalidCaseNumber()` - Executes business operations
-- `getMessage()` `toString()` `printStackTrace()` - Inherited methods from exception class
+- `CaseNotFoundException(...)` - When a player types case number 7777 but only cases 6601-6605 exist, this constructor is called to create an exception that contains both the error message and the number 7777, which then gets caught by the try-catch block in Main.java to display a helpful error and not letting the program crash.
+- `getInvalidCaseNumber()` - If the player enters 8888 and you want to display "ERROR: Case 8888 is not available. Please select from cases 6601-6605", you would use e.getInvalidCaseNumber() to get that 8888 value and include it in your custom error message, making the feedback more specific and helpful to the player.
+- `getMessage()` `toString()` `printStackTrace()` - These are all inherited method from the Exception class.
 ---
 
 ### **6. The Interface (Suspect.java)**
 ⚙️ **Role**: Every Suspect is set to follow this “rule set”. The interface ensures all suspect enums have the same required methods. 
 
 **Key Methods:**
-- `getFullName()` - Performs calculations
-- `getCategory()` - Executes business operations
+- `getFullName()` `getCategory()`- Every single case needs to display the suspect's name and category to the player so it's a perfect candidate for an interface
 ---
 
 ## 🗺️ Class Diagram
@@ -642,6 +641,7 @@ The following features and improvements are planned for future versions:
 1. **Sherlock Holmes** - Various cases of his were utilized and modified to show our users the art of deduction and critical thinking skills.
 2. **Project LOKI** - Serves as the inspiration in creating The Chemistry Lab Murder, one of the case in the game.
 ---
+
 
 
 
