@@ -17,12 +17,12 @@
 A Java console-based detective game where players step into the shoes of an investigator tasked with solving a series of crimes. With the legendary Sherlock Holmes occupied with more pressing cases out of town, the pressure falls on you to crack each case and bring justice to the innocent victims. Complete all five cases to earn crucial clues needed to unlock the ultimate carrier of secrets - **[the Pandora's Box]**. In this digital era, where inequality plagues every nation and corruption, killings, and graft run rampant, the people deserve to know the truth. Your mission is to expose the crocodiles in high government positions who exploit the lives of the poor. Unlock Pandora's Box and, with just one click, reveal all their secrets to the world.
 
 ## ✨ Key Features
-- **Navigate through Cases**: Investigate crime cases by selecting case numbers in the Cases Vault.
-- **Investigate**: Analyze suspects and read their alibis, personal backgrounds, and motives.
-- **Deduce Culprit**: Examine evidence presented for each case to deduce the culprit.
-- **Feature 4**: Identify the correct suspect by manually typing their name based on clues.
-- **Feature 5**: Explore locked files inside Pandora’s Box through a login system (hidden scandals).
-- **Feature 6**: Encounter game consequences, such as error messages (CaseNotFoundException) when choosing an invalid case.
+- **1**: Investigate crime cases by selecting case numbers in the Cases Vault.
+- **2**: Analyze suspects and read their alibis, personal backgrounds, and motives.
+- **3**: Examine evidence presented for each case to deduce the culprit.
+- **4**: Identify the correct suspect by manually typing their name based on clues.
+- **5**: Explore locked files inside Pandora’s Box through a login system (hidden scandals).
+- **6**: Encounter game consequences, such as error messages (CaseNotFoundException) when choosing an invalid case.
 ---
 
 ## 🏛️ Program Structure
@@ -53,78 +53,6 @@ A Java console-based detective game where players step into the shoes of an inve
 ```
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-<table>
-  <thead>
-    <tr>
-      <th align="center">Structure</th>
-      <th align="center">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Main.java</td>
-      <td>Entry point of the program, containing the menu and handles user interactions.</td>
-    </tr>
-    <tr>
-      <td>Case.java</td>
-      <td >Abstract base class defining the structure and behavior of all cases.</td>
-    </tr>
-    <tr>
-      <td>Suspect.java</td>
-      <td>Interface defining the contract for all suspects, requiring methods for full name and category.</td>
-    </tr>
-    <tr>
-      <td>NoSuspect.java</td>
-      <td>Enum representing the initial state when no suspect has been chosen.</td>
-    </tr>
-    <tr>
-      <td>PoetsLastDeadline.java</td>
-      <td>Concrete case class detailing the Poets Last Deadline, suspect’s alibis evidence, and analysis logic.</td>
-    </tr>
-    <tr>
-      <td>ChemistryLabMurder.java</td>
-      <td>Concrete case class detailing the Case of the Chemistry Lab Murder, suspect’s alibis evidence, and analysis logic.</td>
-    </tr>
-    <tr>
-      <td>StolenFormula.java</td>
-      <td>Concrete case class detailing the Case of the Stolen Formula, suspect’s alibis evidence, and analysis logic.</td>
-    </tr>
-    <tr>
-      <td>CaseOfBackwardClock.java</td>
-      <td>Concrete case class detailing the Case of Backward Clock, suspect’s alibis evidence, and analysis logic.</td>
-    </tr>
-    <tr>
-      <td>ConductorsFinalNote.java</td>
-      <td>Concrete case class detailing the Case of Conductors Final Note, suspect’s alibis evidence, and analysis logic.</td>
-    </tr>
-    <tr>
-      <td>PoetsLastDeadlineSuspects.java</td>
-      <td>Enum enlisting all suspects in the Poet’s Last Deadline case, with their names, roles, and category.</td>
-    </tr>
-    <tr>
-      <td>ChemistryLabMurderSuspects.java</td>
-      <td>Enum enlisting all suspects in the Chemistry Lab Murder case, with their names, roles, and category.</td>
-    </tr>
-    <tr>
-      <td>StolenFormulaSuspects.java</td>
-      <td>Enum enlisting all suspects in the Stolen Formula case, with their names, roles, and category.</td>
-    </tr>
-    <tr>
-      <td>CaseOfBackwardClockSuspects.java</td>
-      <td>Enum enlisting all suspects in the Backward Clock case, with their names, roles, and category.</td>
-    </tr>
-    <tr>
-      <td>ConductorsFinalNoteSuspects.java</td>
-      <td>Enum enlisting all suspects in the Conductor's case, with their names, roles, and category.</td>
-    </tr>
-    <tr>
-      <td>CaseNotFoundException</td>
-      <td>Custom exception thrown when an invalid case number is requested.</td>
-    </tr>
-  </tbody>
-</table>
-
 
 # 🏗️ OOP Concepts Applied
 
@@ -495,7 +423,7 @@ System loading.....................(Enter to continue)
     <img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=yellow" alt="darumous1301's GitHub">
         </a>
     </td>
-    <td>Project Leader/Git Manager & System Architect</td>
+    <td>Git Manager & System Architect</td>
 </tr>
 <tr>
     <td><img src="static/irish.png" width="100" height="100"> </td>
@@ -504,7 +432,7 @@ System loading.....................(Enter to continue)
     <img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=blue" alt="ciancrey's GitHub">
         </a>
     </td>
-    <td>Content Writer / Security & Error-Handling Specialist</td>
+    <td>Content Writer & Documentation Head</td>
 </tr>
 <tr>
     <td><img src="static/anica.png" width="100" height="100"> </td>
@@ -513,7 +441,7 @@ System loading.....................(Enter to continue)
     <img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=pink" alt="Anicakim13's GitHub">
         </a>
     </td>
-    <td>Content Writer & Documentation Head</td>
+    <td>Content Writer / Security & Error-Handling Specialist</td>
 </tr>
 </table>
 
@@ -521,78 +449,47 @@ System loading.....................(Enter to continue)
 
 ## 🙏 Acknowledgements
 
-I would like to express my gratitude to:
+We would like to express our gratitude to:
 
-- **Professor/Instructor Name** - For guidance and support throughout the project development
-- **Classmate/Peer Name** - For collaboration and helpful discussions on implementation
-- **Resource/Tutorial Name** - For valuable learning materials and code examples
-- **Online Community** - Stack Overflow and GitHub communities for problem-solving assistance
-
+- **Ms. Fatima Marie M. Agdon** - for guiding us throughout the development of the project, and for teaching us on how to use each of them and what’s their purpose in the program. We've learned a lot from this whole semester, we didn't just learn how to code, but to understand the beauty of it, we hope we successfully integrated all of our learnings in this simple text-based detective game, We are truly grateful.
+- **CS-2101** -  for sharing ideas, giving feedback, and helping solve coding problems.
+- **Family and Friends** -  for giving insights and recommendations to better understand our game.
+- **VS Code | GitHub | AI Tools | Online Community** - for being our tool to successfully implement the game and for giving us assistance for us to be guided in the process of doing it.
+  
 ---
 
 ## 🔮 Future Enhancements
 
 The following features and improvements are planned for future versions:
 
-- [ ] 🎨 **GUI Implementation**: Create a graphical user interface using JavaFX or Swing
-- [ ] 💾 **Database Integration**: Implement MySQL/PostgreSQL for persistent data storage
-- [ ] 🌐 **API Integration**: Connect to external APIs for real-time data
-- [ ] 🔐 **User Authentication**: Add login system with password encryption
-- [ ] 📊 **Data Visualization**: Implement charts and graphs for data analysis
-- [ ] 🐛 **Enhanced Error Handling**: Comprehensive exception handling for edge cases
-- [ ] ⚡ **Performance Optimization**: Improve algorithm efficiency for large datasets
-- [ ] 📱 **Mobile Version**: Develop Android/iOS companion app
-- [ ] 🌍 **Internationalization**: Support multiple languages
-- [ ] 📝 **Logging System**: Implement detailed logging for debugging
+- [ ] 🎨 **GUI Implementation**: Create a visual version instead of pure console text. Through integration of tools like HTML, CSS and Javascript.
+- [ ] 💾 **Investigation Tools**: Add features like timeline builder, evidence tracker, and suspect comparison tool.
+- [ ] 🌐 **API Integration and Online Features**: Add leaderboards / case sharing and connect to external APIs for real-time data.
+- [ ] 🔐 **User Authentication**: Add login system with password encryption to handle personal achievements and statistics privately.
+- [ ] 🐛 **Enhanced Error Handling**: Add clearer messages and prevent unexpected crashes.
+- [ ] 📱 **Smarter Dialogue System**: Use dynamic responses for suspects instead of static text.
+- [ ] 🌍 **Cases Bank**: Generates bulk of cases that is access randomly to make the game more diversed and exciting to play
 
 ---
 
 ## 📚 References
 
 ### Documentation & Official Resources
-1. **Java Documentation** - Oracle Official Docs  
-   🔗 [https://docs.oracle.com/en/java/](https://docs.oracle.com/en/java/)
+1. **Final Project Guidelines** -  A Guideline issued by the Professor for a comprehensive Project Details Guidelines 
+   🔗 [Final Project Requirements](https://docs.google.com/document/d/1VvIyPrOSisnaOd72AehSDdRtcXq27g3oUMBw55ggGpQ/edit?tab=t.0)
 
-2. **Java SE API Specification**  
-   🔗 [https://docs.oracle.com/en/java/javase/11/docs/api/](https://docs.oracle.com/en/java/javase/11/docs/api/)
+2. **Github Repositories**  - This repositories serves as the backbone of our project as we first use it as a basis to utilize encapsulation and polymorphism in our game, the second repository serves as our basis in creating our README.md file to properly document "The Syntax of Crimes" progress.
+   🔗 [CS211-LAB-Activity-3](https://github.com/marieemoiselle/CS211LabActivity3)
+   🔗 [Java-Notes-Diary](https://github.com/marieemoiselle/java-notes-diary)
 
-### Books & Tutorials
-3. **Effective Java** - Joshua Bloch (3rd Edition, 2018)
-4. **Head First Java** - Kathy Sierra & Bert Bates (2nd Edition)
-5. **Clean Code** - Robert C. Martin (2008)
+2. **Online Resources**  - This resources guided us to properly implement exception hadling situations
+   🔗 [Geek for Geeks (Java Exception Handling)](https://www.geeksforgeeks.org/java/exceptions-in-java/)
+   🔗 [Geek for Geeks (Try Catch Block)](https://www.geeksforgeeks.org/java/java-try-catch-block/)
+   🔗 [Stack Overflow (ArrayList)]( https://stackoverflow.com/questions/1921181/arraylist-of-string-arrays)
 
-### Online Resources
-6. **Stack Overflow** - Community discussions and problem-solving  
-   🔗 [https://stackoverflow.com/](https://stackoverflow.com/)
-
-7. **GeeksforGeeks** - Java programming tutorials and concepts  
-   🔗 [https://www.geeksforgeeks.org/java/](https://www.geeksforgeeks.org/java/)
-
-8. **Baeldung** - Java tutorials and guides  
-   🔗 [https://www.baeldung.com/](https://www.baeldung.com/)
-
-### Video Tutorials
-9. **YouTube Channel Name** - Specific tutorial series on [topic]
-10. **Coursera/Udemy Course** - [Course name and instructor]
-
+### Books and Online Resources
+1. **Sherlock Holmes** - Various cases of his were utilized and modified to show our users the art of deduction and critical thinking skills.
+2. **Project LOKI** - Serves as the inspiration in creating The Chemistry Lab Murder, one of the case in the game.
 ---
 
-<div align="center">
 
-## ⭐ Support This Project
-
-If you found this project helpful, please consider giving it a ⭐!
-
-**Made with ❤️ and ☕ by [Your Name]**
-
----
-
-### 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
-
----
-
-![Thank You](https://img.shields.io/badge/Thank%20You-For%20Visiting-brightgreen?style=for-the-badge)
-
-</div>
