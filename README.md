@@ -69,32 +69,19 @@ This project demonstrates the core principles of Object-Oriented Programming:
 Encapsulation was implemented to protect sensitive data and provide controlled access through getter and setter methods. Private attributes ensure that internal object states cannot be modified directly from outside the class.
 
 ```java
-// Preview of Code Implementation
 public abstract class Case {
     private int caseID;
     private String caseName;
-    .....
-
-    public Case(int caseID, String caseName, String caseDescription, String suspectAlibi, String evidences) {
-        this.caseID = caseID;
-        this.caseName = caseName;
-        .....
-    }
-
-    public Case() {
-        this.caseID = 0;
-        this.caseName = "";
-        .....
-    }
+    private String caseDescription;
+    private String suspectAlibi;
+    private String evidences;
 
     public int getCaseID() {return caseID;}
     public String getCaseName() {return caseName;}
-    .....
-
     public void setCaseID(int caseID) {this.caseID = caseID;}
-    public void setCaseName(String caseName) {this.caseName = caseName;}
-    .....
 
+    public void setCaseName(String caseName) {this.caseName = caseName;}
+}
 ```
 
 **Implementation in Project:**
@@ -109,32 +96,61 @@ public abstract class Case {
 Inheritance promotes code reusability by creating parent-child relationships between classes. Child classes inherit properties and methods from parent classes while adding their own specific functionality.
 
 ```java
-//Preview of Code Implementation
+//PARENT CLASS FOR ALL CASES
+public abstract class Case { 
+```
+```java
+//CHILD CLASSES
 class PoetsLastDeadline extends Case {
     private Suspect suspect;
 
     public PoetsLastDeadline() {
-        super(
-                6601,
-                "\u001B[36m Case of Poet's Last Deadline \u001B[36m",
-                "Oliver Grant, a relentless investigative journalist, was found dead inside ...",
-                "Rebecca Moore (Assistant):\n-last person to speak to him...",
-                "1. Handwritten poem pinned to chest...");
+        super(6601, "\u001B[36m Case of Poet's Last Deadline \u001B[36m", ...);
         this.suspect = NoSuspect.NONE;
     }
+}
+```
+```java
+class ChemistryLabMurder extends Case {
+    private Suspect suspect;
 
-    public Suspect getSuspect() {
-        return suspect;
+    public ChemistryLabMurder() {
+        super(6602, "\u001B[36m The Chemistry Lab Murder \u001B[36m", ...);
+        this.suspect = NoSuspect.NONE;
     }
+}
+```
+```java
+public class StolenFormula extends Case {
+    private Suspect suspect;
 
-    public void setSuspect(Suspect suspect) {
-        this.suspect = suspect;
+    public StolenFormula() {
+        super(6603, "\u001B[36m The Stolen Formula \u001B[36m", ...);
+        this.suspect = NoSuspect.NONE;
     }
+}
+```
+```java
+class CaseOfBackwardClock extends Case {
+    private Suspect suspect;
+
+    public CaseOfBackwardClock() {
+        super(6605, "\u001B[36m The Case of the Backward Clock \u001B[36m", ...);
+        this.suspect = NoSuspect.NONE;
+    }
+}
+```
+```java
+class ConductorsFinalNote extends Case {
+    private Suspect suspect;
+
+    public ConductorsFinalNote() {
+        super(6604, "\u001B[36m The Case of the Conductor's Final Note \u001B[36m", ...);
+        this.suspect = NoSuspect.NONE;
+    }
+}
 ```
 
-**Class Hierarchy**
-```
-```
 
 **Implementation in Project:**
 - Base class contains common attributes and methods
@@ -148,40 +164,32 @@ class PoetsLastDeadline extends Case {
 
 Polymorphism allows objects to take multiple forms through method overriding and overloading, enabling flexible and dynamic behavior at runtime.
 ```java
-//Preview of Code Implementation
-class Main {
-    public static void main(String[] args) {
-        .....
-        Switch(choice){
-          Case.casesVault();
-            case 1:
-                try {
-                    if(caseNo == 6601){
-                        Case case1 = new PoetsLastDeadline();
-                        case1.displayCaseInfo();
-                        .....
-                    }else if(caseNo == 6602){
-                        Case case2 = new ChemistryLabMurder();
-                        case2.displayCaseInfo();
-                        .....
-                    }else if(caseNo == 6603){
-                        Case case3 = new StolenFormula();
-                        case3.displayCaseInfo();
-                        .....
-                    }else
-                        .....
-                }catch{
-                    break;
-                }
-            case 2:
-                ....
-                break;
-            default:
-            break;
-        }
-    }
+@Override
+//EXAMPLE PoetsLastDeadline.java
+public void displayCaseInfo() {
+    System.out.println("====== Case of Poet's Last Deadline ======");
+    System.out.println("Case ID: " + getCaseID());
+}
+
+@Override
+public void analyzeCaseClues() {
+    System.out.println("\n\033[33m╔═══════════════════════════════════╗\033[0m");
+    System.out.println("\033[33m║     POET'S LAST DEADLINE - ANALYSIS    ║\033[0m");
+}
+
+@Override
+public boolean isCaseSolved() {
+    return suspect == PoetsLastDeadlineSuspects.MICHAEL_SANDERS;
 }
 ```
+```java
+PoetsLastDeadline case1 = new PoetsLastDeadline();
+case1.displayCaseInfo();  // calls override method
+
+Suspect matchedSuspect = PoetsLastDeadlineSuspects.valueOf(suspect);
+case1.setSuspect(matchedSuspect);  // use interface from Suspect.java
+```
+
 **Implementation in Project:**
 - Method overriding for specialized behavior in child classes
 - Method overloading for different parameter combinations
@@ -195,9 +203,44 @@ class Main {
 Abstraction hides complex implementation details and shows only the essential features of objects. This simplifies the interface and reduces complexity for users of the class.
 
 ```java
+//ABSTACT CLASS Case.java
+public abstract class Case {
+    public void displayCaseInfo() {
+        System.out.println("Case ID: " + caseID);
+        // ...
+    }
+
+    public abstract void analyzeCaseClues();
+    public abstract boolean isCaseSolved();
+}
+```
+```java
+//INTERFACE Suspect.java
 public interface Suspect {
     String getFullName();
     String getCategory();
+}
+```
+```java
+//EXAMPLE IN ONE OF THE CASES
+//ALL SUSPECT ENUMS IMPLEMENTS THE INTERFACE
+public enum PoetsLastDeadlineSuspects implements Suspect {
+    REBECCA_MOORE("Rebecca Moore", "Assistant"),
+    MICHAEL_SANDERS("Michael Sanders", "Rival Journalist"),
+    SAMUEL_REEVES("Samuel Reeves", "Data Analyst/Whistleblower");
+
+    private final String fullName;
+    private final String role;
+
+    @Override
+    public String getFullName() {
+        return fullName;
+    }
+
+    @Override
+    public String getCategory() {
+        return "Poet's Last Deadline";
+    }
 }
 ```
 **Implementation in Project:**
@@ -205,6 +248,79 @@ public interface Suspect {
 - Interfaces specify required methods
 - Implementation details hidden from end users
 ---
+
+## 4️⃣ Exception Handling
+> 🎨 **Hiding Complexity**
+
+Abstraction hides complex implementation details and shows only the essential features of objects. This simplifies the interface and reduces complexity for users of the class.
+
+```java
+//CaseNotFoundException.java
+public class CaseNotFoundException extends Exception {
+    private int invalidCaseNumber;
+
+    public CaseNotFoundException(int caseNumber) {
+        super("Case #" + caseNumber + " not found in the vault. Please check the case number.");
+        this.invalidCaseNumber = caseNumber;
+    }
+
+    public int getInvalidCaseNumber() {
+        return invalidCaseNumber;
+    }
+}
+```
+```java
+try {
+    System.out.print("\n\n>> Investigate Case No.: ");
+    int caseNo = sc.nextInt();
+    sc.nextLine();
+
+    if (caseNo == 6601) {
+        // Case handling
+    } else if (caseNo == 6602) {
+        // Case handling
+    } else {
+        throw new CaseNotFoundException(caseNo);
+    }
+
+} catch (CaseNotFoundException e) {
+    System.out.println("\n\033[31mERROR: " + e.getMessage() + "\033[0m");
+    System.out.println("\033[31mPlease select a valid case number from the vault.\033[0m");
+}
+```
+```java
+while (!sc.hasNextInt()) {
+    System.out.print("\n\033[31mInvalid input! Please enter a number (1-4): \033[0m");
+    sc.next(); 
+}
+choice = sc.nextInt();
+```
+```java
+Suspect matchedSuspect = null;
+try {
+    matchedSuspect = PoetsLastDeadlineSuspects.valueOf(suspect);
+} catch (IllegalArgumentException e) {
+    System.out.println("\n\033[31mInvalid suspect name. Please try again.\033[0m");
+    break;
+}
+```
+```java
+catch (InputMismatchException e) {
+    System.out.println("\n\033[31mERROR: Invalid input. Please enter a numeric case number.\033[0m");
+    sc.nextLine(); // Clear the buffer
+}
+```
+
+```java
+try {
+    String retryChoice = sc.nextLine().trim().toLowerCase();
+    // ...
+} catch (NoSuchElementException e) {
+    System.out.println("\n\033[31mInput error. Exiting Pandora's Box access...\033[0m\n");
+    break;
+}
+```
+
 ## 📦 Main Classes and Their Roles
 
 ### **1. MainClass** 
@@ -491,5 +607,6 @@ The following features and improvements are planned for future versions:
 1. **Sherlock Holmes** - Various cases of his were utilized and modified to show our users the art of deduction and critical thinking skills.
 2. **Project LOKI** - Serves as the inspiration in creating The Chemistry Lab Murder, one of the case in the game.
 ---
+
 
 
