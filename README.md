@@ -533,8 +533,6 @@ chosenOne.pdf - view
 
 ## 📸 Output Screenshots
 
-*(If you have screenshots, add them here)*
-
 <p align="center">
   <img src="static/MainMenu.png" alt="App Screenshot" width="400"/><br>
   <em>Screenshot of the game's Main Menu along with the Case Vault Menu</em>
@@ -636,6 +634,7 @@ The following features and improvements are planned for future versions:
 1. **Sherlock Holmes** - Various cases of his were utilized and modified to show our users the art of deduction and critical thinking skills.
 2. **Project LOKI** - Serves as the inspiration in creating The Chemistry Lab Murder, one of the case in the game.
 ---
+
 
 
 
