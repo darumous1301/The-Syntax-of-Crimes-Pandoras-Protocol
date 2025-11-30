@@ -1,0 +1,30 @@
+# Create .gitignore at root level
+cat > .gitignore << 'EOF'
+# Compiled class files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Build directories
+bin/
+target/
+build/
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+EOF
